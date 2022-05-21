@@ -51,6 +51,7 @@ public:
 				}
 			}
 		}
+		stream.close();
 	}
 
 	~RTTEX() {
