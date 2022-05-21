@@ -115,7 +115,7 @@ float AnswerByEquation(RTTEX& image, BitMap* Square) {
 				}
 				if (onFinished || MatchCount > 200) {
 					printf("[CAPTCHA]: Solved Piece Location (%u,%u)\n", X, Y);
-					return ((float)(X - 39) / 512);
+					return ((float)(X - 32) / 512);
 				}
 			}
 		}
