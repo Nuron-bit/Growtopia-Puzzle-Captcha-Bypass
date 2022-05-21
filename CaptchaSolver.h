@@ -148,7 +148,7 @@ std::string SolveCaptcha(variant_t& variant) {
 
 		float Answer = GetAnswer(Image);
 
-		if (Answer == 0.f) {
+		if (Answer <= 0.f) {
 			printf("[CAPTCHA]: Downloading From: %s\n\n", PuzzlePieceLink.c_str());
 			if(SUCCEEDED(URLDownloadToFile(NULL, PuzzlePieceLink.c_str(), ExactPuzzlePath.c_str(), 0, NULL))) {
 			printf("[CAPTCHA]: Downloaded Puzzle Piece.\n");
