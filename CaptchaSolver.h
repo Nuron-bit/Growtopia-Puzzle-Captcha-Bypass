@@ -160,11 +160,11 @@ std::string SolveCaptcha(variant_t& variant) {
 			if (Answer != 0.f) {
 				printf("[CAPTCHA]: Matched Pattern (in %f miliseconds)!\n\n", duration<double, std::milli>(m_end - m_start));
 				}
+			std::remove(PuzzleFilePath.c_str());
 			}
 		}
 
 		std::remove(FilePath.c_str());
-		std::remove(PuzzleFilePath.c_str());
 		
 		steady_clock::time_point end = high_resolution_clock::now();
 
